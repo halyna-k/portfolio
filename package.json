@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "16.2.10",
+    "next": "^16.2.10",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
@@ -20,7 +20,15 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.6",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true,
+    "fsevents@1.2.13": true,
+    "unrs-resolver@1.12.2": true,
+    "es5-ext@0.10.64": true
   }
 }
