@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="px-16 pt-36 pb-32 ">
+    <section className="px-16 pt-36 pb-24">
       <span className="block text-accent text-sm tracking-[2px] uppercase mb-6">
         React · TypeScript · AI Integration
       </span>
