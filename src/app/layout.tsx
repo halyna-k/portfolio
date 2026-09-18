@@ -1,19 +1,20 @@
 import type { Metadata } from 'next';
-import { Fraunces, Manrope } from 'next/font/google';
+import { Archivo, Bodoni_Moda } from 'next/font/google';
 import '@/styles/globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
-const fraunces = Fraunces({
+const bodoniModa = Bodoni_Moda({
   subsets: ['latin'],
+  weight: ['400', '500', '600'],
   variable: '--font-heading',
-  display: 'swap',
+  style: ['normal', 'italic'],
 });
 
-const manrope = Manrope({
+const archivo = Archivo({
   subsets: ['latin'],
+  weight: ['300', '400', '500','600'],
   variable: '--font-body',
-  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${manrope.variable} h-full antialiased`}>
+    <html lang="en" className={`${archivo.variable} ${bodoniModa.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>
