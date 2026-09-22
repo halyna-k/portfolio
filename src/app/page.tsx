@@ -1,5 +1,4 @@
-import Hero from "@/components/sections/Hero";
-import ProjectsGrid from "@/components/sections/ProjectsGrid";
+import { Hero, ProjectsGrid } from '@/components';
 
 export default function Home() {
   return (

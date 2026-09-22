@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { Archivo, Bodoni_Moda } from 'next/font/google';
 import '@/styles/globals.css';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import { Footer, Header } from '@/components';
 
 const bodoniModa = Bodoni_Moda({
   subsets: ['latin'],
