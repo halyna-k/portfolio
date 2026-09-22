@@ -13,7 +13,7 @@ export default function Footer() {
         </Link>
         <div className="flex items-center text-sm gap-3">
           <Logo size="text-sm"/>
-          <span className="border-l border-border text-muted pl-3">&copy; 2026</span>
+          <span className="border-l border-border text-muted pl-3">&copy; {new Date().getFullYear()}</span>
         </div>
       </div>
     </footer>
