@@ -9,6 +9,7 @@ export const cryptoDashboard: Project = {
   description: "Real-time cryptocurrency tracking and analytics platform.",
   stack: ['React', 'TypeScript', 'Tailwind CSS', 'CoinGecko API'],
   size: 'medium',
+  featured: true,
   href: '/projects/crypto-dashboard',
   isExternal: false,
   liveUrl: '',

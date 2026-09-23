@@ -7,6 +7,7 @@ export interface Project {
   description: string;
   stack: string[];
   size: 'large' | 'medium';
+  featured?: boolean;
   href: string;
   isExternal?: boolean;
   liveUrl?: string;
