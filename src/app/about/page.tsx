@@ -1,7 +1,10 @@
+import { Back } from "@/components";
+
 export default function AboutPage() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-serif">About</h1>
-    </main>
+    <>
+      <Back />
+      <h1 className="text-4xl font-heading">About</h1>
+    </>
   );
 }
