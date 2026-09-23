@@ -1,4 +1,4 @@
-export default function LinkTo({ href, children, variant = 'primary' } : {
+export default function LinkExternal({ href, children, variant = 'primary' } : {
   href: string;
   children: React.ReactNode;
   variant?: 'primary' | 'secondary';
@@ -14,7 +14,7 @@ export default function LinkTo({ href, children, variant = 'primary' } : {
       rel="noopener noreferrer"
       className={`inline-block px-6 py-3 border text-sm rounded-sm transition-colors ${styles}`}
     >
-      {children}
+      {children} {"\u2197"}
     </a>
   );
 }
