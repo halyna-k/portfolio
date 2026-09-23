@@ -5,6 +5,7 @@ export { default as Footer } from './layout/Footer';
 export { default as Hero } from './sections/Hero';
 export { default as ProjectsGrid } from './sections/ProjectsGrid';
 
+export { default as SectionLabel } from './ui/SectionLabel';
 export { default as Logo } from './ui/Logo';
 export { default as ProjectCard } from './ui/ProjectCard';
 
