@@ -16,7 +16,7 @@ export default function ProjectsGrid({ variant = 'all' }: { variant?: 'featured'
 
   if (variant === 'featured') {
     return (
-      <section className="px-16 py-24">
+      <section className="px-16 py-24 border-t border-border">
         <SectionLabel className="mb-8">Selected Projects</SectionLabel>
 
         <div className="flex flex-col gap-12">
