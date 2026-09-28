@@ -1,10 +1,12 @@
-import { Back } from "@/components";
+import { Back, Container } from '@/components';
 
 export default function ContactPage() {
   return (
     <>
       <Back />
-      <h1 className="text-4xl font-heading">Contact</h1>
+      <Container>
+        <h1 className="text-3xl md:text-4xl">Contact</h1>
+      </Container>
     </>
   );
 }

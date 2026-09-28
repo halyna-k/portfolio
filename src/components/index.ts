@@ -6,6 +6,7 @@ export { default as Hero } from './sections/Hero';
 export { default as AboutTeaser } from './sections/AboutTeaser';
 export { default as ProjectsGrid } from './sections/ProjectsGrid';
 
+export { default as Container } from './ui/Container';
 export { default as SectionLabel } from './ui/SectionLabel';
 export { default as Logo } from './ui/Logo';
 export { default as ProjectCard } from './ui/ProjectCard';

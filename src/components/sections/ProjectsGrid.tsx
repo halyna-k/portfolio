@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Container from '@/components/ui/Container';
 import ProjectCard from '@/components/ui/ProjectCard';
 import SectionLabel from '@/components/ui/SectionLabel';
 import { projects } from '@/content/projects';
@@ -16,15 +17,18 @@ export default function ProjectsGrid({ variant = 'all' }: { variant?: 'featured'
 
   if (variant === 'featured') {
     return (
-      <section className="px-16 py-24 border-t border-border">
+      <Container as="section" className="py-16 md:py-24 border-t border-border">
         <SectionLabel className="mb-8">Selected Projects</SectionLabel>
 
-        <div className="flex flex-col gap-12">
-          <div className="grid grid-cols-[1.4fr_1fr] gap-6">
+        <div className="flex flex-col gap-6 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr] gap-6">
             {firstRow.map((p) => p && <ProjectCard key={p.id} project={p} />)}
           </div>
           {remainingRows.map((row, i) => (
-            <div key={i} className={`grid gap-6 ${row.length === 2 ? 'grid-cols-2' : 'grid-cols-1'}`}>
+            <div
+              key={i}
+              className={`grid grid-cols-1 gap-6 ${row.length === 2 ? 'md:grid-cols-2' : ''}`}
+            >
               {row.map((p) => <ProjectCard key={p.id} project={p} />)}
             </div>
           ))}
@@ -32,24 +36,24 @@ export default function ProjectsGrid({ variant = 'all' }: { variant?: 'featured'
 
         <Link
           href="/projects"
-          className="inline-block mt-12 text-accent text-sm hover:text-accent-hover transition-colors"
+          className="inline-block mt-10 md:mt-12 text-accent text-sm hover:text-accent-hover transition-colors"
         >
           All Projects &rarr;
         </Link>
-      </section>
+      </Container>
     );
   }
 
   return (
-    <section className="px-16 pb-24 flex flex-col gap-6">
-      <h1 className="font-heading text-5xl mb-4">All Projects</h1>
-      <p className="text-muted text-lg max-w-xl mb-10">
+    <Container as="section" className="pb-16 md:pb-24 flex flex-col gap-6">
+      <h1 className="font-heading text-4xl md:text-5xl mb-4">All Projects</h1>
+      <p className="text-muted text-base md:text-lg max-w-xl mb-6 md:mb-10">
         A collection of my work, showcasing a range of projects that highlight my skills and expertise in various areas of development.
       </p>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((p) => <ProjectCard key={p.id} project={p} />)}
       </div>
-    </section>
+    </Container>
   );
 }

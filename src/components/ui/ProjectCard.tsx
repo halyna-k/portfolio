@@ -7,11 +7,11 @@ export default function ProjectCard({ project }: { project: Project }) {
       href={project.href}
       target={project.isExternal ? '_blank' : undefined}
       rel={project.isExternal ? 'noopener noreferrer' : undefined}
-      className="group relative flex flex-col justify-between p-8 bg-bg-elevated border border-border rounded-sm overflow-hidden hover:border-accent hover:-translate-y-1 hover:shadow-xl hover:bg-bg-elevated/40 transition-all"
+      className="group relative flex flex-col justify-between p-6 md:p-8 bg-bg-elevated border border-border rounded-sm overflow-hidden hover:border-accent hover:-translate-y-1 hover:shadow-xl hover:bg-bg-elevated/40 transition-all"
     >
       <span
         aria-hidden="true"
-        className="absolute -top-3 -right-2 font-heading italic text-8xl text-border select-none pointer-events-none"
+        className="absolute -top-3 -right-2 font-heading italic text-7xl md:text-8xl text-border select-none pointer-events-none"
       >
         {project.index}
       </span>

@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { projects } from '@/content/projects';
-import { Back, LinkExternal, PlaceholderNote, ProjectImagePlaceholder } from '@/components';
+import { Back, Container, LinkExternal, PlaceholderNote, ProjectImagePlaceholder } from '@/components';
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -23,20 +23,20 @@ export default async function ProjectCasePage({ params }: { params: Promise<{ sl
       <Back href="/projects" label="Projects" />
       <ProjectImagePlaceholder label={project.index} />
 
-      <section className="px-16 pt-16 pb-8">
+      <Container as="section" className="pt-10 md:pt-16 pb-8">
         <span className="block text-accent text-sm mb-4">{project.index}</span>
-        <h1 className="font-heading text-5xl mb-6">{project.title}</h1>
-        <p className="text-muted text-lg max-w-2xl mb-8">
+        <h1 className="font-heading text-4xl md:text-5xl mb-6">{project.title}</h1>
+        <p className="text-muted text-base md:text-lg max-w-2xl mb-8">
           {project.description}
         </p>
 
-        <div className="flex gap-4 mb-4">
+        <div className="flex flex-wrap gap-4">
           {project.liveUrl && <LinkExternal href={project.liveUrl}>Live Demo</LinkExternal>}
           {project.githubUrl && <LinkExternal href={project.githubUrl} variant="secondary">GitHub</LinkExternal>}
         </div>
-      </section>
+      </Container>
 
-      <section className="px-16 py-8 flex flex-col gap-10 max-w-3xl">
+      <Container as="section" className="py-8 flex flex-col gap-10 max-w-3xl">
         {sections.map((s) => (
           <div key={s.label}>
             <h2 className="font-heading text-2xl mb-3">{s.label}</h2>
@@ -63,8 +63,7 @@ export default async function ProjectCasePage({ params }: { params: Promise<{ sl
             </div>
           </div>
         )}
-      </section>
-
+      </Container>
     </article>
   );
 }
