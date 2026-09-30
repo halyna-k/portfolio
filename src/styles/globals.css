@@ -6,23 +6,32 @@
   --color-text: #D9CDD1;
   --color-muted: #9C8993;
   --color-accent: #7A3B4E;
-  --color-accent-hover: #8F4A5E;
+  --color-accent-text: #C77B92;
   --color-border: #332530;
+  --color-error: #E8A5B5;
 
   --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
 
-  --font-heading: var(--font-heading);
-  --font-body: var(--font-body);
+  --font-heading: var(--font-heading-src);
+  --font-body: var(--font-body-src);
 }
 
-body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-body);
-}
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+  }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-heading);
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-text);
+    outline-offset: 3px;
+  }
 }
