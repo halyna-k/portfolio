@@ -1,5 +1,5 @@
-import Container from '@/components/ui/Container';
-import Logo from '@/components/ui/Logo';
+import Container from '@/components/layout/Container';
+import Logo from '@/components/layout/Logo';
 import Nav from './Nav';
 
 export default function Header() {

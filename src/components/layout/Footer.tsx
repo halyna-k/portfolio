@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Container from '@/components/ui/Container';
-import Logo from '@/components/ui/Logo';
+import Container from '@/components/layout/Container';
+import Logo from '@/components/layout/Logo';
 
 export default function Footer() {
   return (

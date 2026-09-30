@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -22,7 +21,7 @@ export default function Nav() {
             href={item.href}
             aria-current={isActive ? 'page' : undefined}
             className={`transition-colors ${
-              isActive ? 'text-accent' : 'text-muted hover:text-accent'
+              isActive ? 'text-accent-text' : 'text-muted hover:text-accent-text'
             }`}
           >
             {item.label}
