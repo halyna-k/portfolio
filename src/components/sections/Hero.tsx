@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import Container from '@/components/ui/Container';
+import Container from '@/components/layout/Container';
+import LinkInternal from '@/components/ui/InternalLink';
 
 export default function Hero() {
   return (
@@ -13,12 +13,7 @@ export default function Hero() {
       <p className="text-muted text-base md:text-lg max-w-xl mb-10">
         Full-stack developer focused on React, TypeScript, and practical AI integration for real business problems.
       </p>
-      <Link
-        href="/projects"
-        className="inline-block px-7 py-3.5 border border-accent text-accent text-sm rounded-sm hover:bg-accent hover:text-bg transition-colors"
-      >
-        View Projects
-      </Link>
+      <LinkInternal href="/projects" variant="secondary">View projects</LinkInternal>
     </Container>
   );
 }
