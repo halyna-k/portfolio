@@ -7,7 +7,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       href={project.href}
       target={project.isExternal ? '_blank' : undefined}
       rel={project.isExternal ? 'noopener noreferrer' : undefined}
-      className="group relative flex flex-col justify-between p-6 md:p-8 bg-bg-elevated border border-border rounded-sm overflow-hidden hover:border-accent hover:-translate-y-1 hover:shadow-xl hover:bg-bg-elevated/40 transition-all"
+      className="group relative flex h-full w-full flex-col justify-between p-6 md:p-8 bg-bg-elevated border border-border rounded-sm overflow-hidden hover:border-accent hover:bg-bg-elevated/40 hover:shadow-xl motion-safe:hover:-translate-y-1 transition"
     >
       <span
         aria-hidden="true"
@@ -29,13 +29,13 @@ export default function ProjectCard({ project }: { project: Project }) {
       {project.stack.length > 0 && (
         <div className="relative mt-6">
           <div className="w-10 h-px bg-accent mb-4" />
-          <div className="flex flex-wrap gap-2">
+          <ul className="flex flex-wrap gap-2">
             {project.stack.map((tech) => (
-              <span key={tech} className="text-xs text-muted border border-border rounded-full px-2.5 py-1">
+              <li key={tech} className="text-xs text-muted border border-border rounded-full px-2.5 py-1">
                 {tech}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       )}
     </Link>
